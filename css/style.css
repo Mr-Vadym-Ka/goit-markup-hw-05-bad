@@ -95,6 +95,8 @@ body {
     bottom: 0;
     left: 0;
     background-color: var(--accent-color);
+    /* transition-duration: 250ms;
+    transition-property: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .header-link:hover::after,
 .header-link:focus::after {
@@ -106,6 +108,7 @@ body {
     bottom: 0;
     left: 0;
     background-color: var(--accent-color);
+    border-radius: 2px;
 }
 .header-link {
     display: block;
@@ -117,6 +120,9 @@ body {
     letter-spacing: 0.02em;
     color: var(--button-color);
     text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -379,6 +385,11 @@ body {
     display: flex;
     justify-content: center;
 }
+.member-social-icon {
+    /* transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
 .social-icon {
     fill: currentColor;
 }
@@ -390,6 +401,9 @@ body {
     align-items: center;
     justify-content: center;
     color: #afb1b8;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-social-link:hover,
@@ -444,9 +458,7 @@ body {
     padding-bottom: 60px;
     background-color: #2f303a;
 }
-/* .footer-link {
-    display: flex;
-} */
+
 .footer-list {
     display: flex;
     align-items: baseline;
@@ -476,9 +488,17 @@ body {
     letter-spacing: 0.03em;
     color: #ffffff;
     text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts {
     font-style: normal;
+}
+.contacts-link {
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-list:not(:last-child) {
     margin-bottom: 10px;
@@ -517,6 +537,9 @@ body {
     align-items: center;
     justify-content: center;
     color: #ffffff;
+    transition-duration: 250ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-social-icon + .member-social-icon {
