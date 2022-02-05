@@ -18,7 +18,9 @@
                 <a href="#" class="logo header-logo"><span class="logo-first">Web</span>Studio</a>
                 <nav class="navigation">
                     <ul class="header-list list">
-                        <li class="header-item"><a href="#" class="header-link current">Студия</a></li>
+                        <li class="header-item">
+                            <a href="#" class="header-link current">Студия</a>
+                        </li>
                         <li class="header-item"><a href="./portfolio.html" class="header-link">Портфолио</a></li>
                         <li class="header-item"><a href="#contacts" class="header-link">Контакты</a></li>
                     </ul>
@@ -43,8 +45,13 @@
     <main>
         <section class="hero section">
             <div class="container">
-            <h1 class="hero-name">эфективные решения <br>для вашего бизнеса</h1>
-            <button type="button" class="hero-btn sort-btn">Заказать услугу</button>
+                <h1 class="hero-name">эфективные решения <br>для вашего бизнеса</h1>
+                <button type="button" class="hero-btn sort-btn" data-modal-open>Заказать услугу</button>
+            </div>
+            <div class="modal-backdrop is-hidden" data-modal>
+                <div class="modal-window">
+                    <p>x</p>
+                </div>
             </div>
         </section>
             <!--Features-->
@@ -97,16 +104,22 @@
             <h2 class="work-pics-title section-title">Чем мы занимаемся</h2>
             <ul class="work-pics-list list">
                 <li class="work-pics-item">
-                    <img src="./img/box-1.jpg" width="370" alt="рабочее место с планшетом">
-                    <p class="overlay-text">дескотопные приложения</p>
+                    <div class="overlay-work-pics">
+                        <img src="./img/box-1.jpg" width="370" alt="рабочее место с планшетом">
+                        <p class="overlay-work-text">дескотопные приложения</p>
+                    </div>
                 </li>
                 <li class="work-pics-item">
-                    <img src="./img/box-2.jpg" width="370" alt="рабочее место с ноутбуком">
-                    <p class="overlay-text">мобильные приложения</p>
+                    <div class="overlay-work-pics">
+                        <img src="./img/box-2.jpg" width="370" alt="рабочее место с ноутбуком">
+                        <p class="overlay-work-text">мобильные приложения</p>
+                    </div>
                 </li>
                 <li class="work-pics-item">
-                    <img src="./img/box-3.jpg" width="370" alt="планшет с палитрой">
-                    <p class="overlay-text">дизайнерские решения</p>
+                    <div class="overlay-work-pics">
+                        <img src="./img/box-3.jpg" width="370" alt="планшет с палитрой">
+                        <p class="overlay-work-text">дизайнерские решения</p>
+                    </div>
                 </li>
             </ul>
             </div>
@@ -374,5 +387,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
