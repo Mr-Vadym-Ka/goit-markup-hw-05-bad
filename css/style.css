@@ -83,30 +83,23 @@ body {
     display: flex;
     align-items: center;
 }
-/* .header-item {
-    position: relative; */
-}
-/* .header-link::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: red;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-} */
-.header-link::after .header-link.current {
+
+/* .header-item:hover::after {
     content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 4px;
-    radius:2px;
+    border-radius: 2px;
     bottom: 0;
     left: 0;
     background-color: var(--accent-color);
-}
+    transition-duration: 250ms;
+    transition-property: background-color color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+/* .header-link .header-link.current, */
 .header-link:hover::after,
 .header-link:focus::after {
     content: "";
@@ -115,7 +108,21 @@ body {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    bottom: 0;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition-duration: 250ms;
+    transition-property: background-color color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -2px;
     left: 0;
     background-color: var(--accent-color);
 }
@@ -141,13 +148,7 @@ body {
 .contacts-link:focus {
     color: var(--accent-color);
 }
-.contacts-item {
-    display: flex;
-    /* align-items: baseline; */
-}
-.header-icon {
-    fill: currentColor;
-}
+
 .contacts-item:hover .header-icon {
     fill: var(--accent-color);
 }
@@ -160,16 +161,21 @@ body {
 .navigation {
     margin-left: 93px;
 }
+
+.header-icon {
+    fill: currentColor;
+}
 .header-list .header-item + .header-item {
     margin-left: 50px;
 }
-
 .header-contacts {
     display: flex;
     margin-left: auto;
-    align-items: baseline;
+    align-items: center;
 }
 .contacts-link {
+    display: flex;
+    align-items: center
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -271,9 +277,9 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-    
+
     border-radius: 50%;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
